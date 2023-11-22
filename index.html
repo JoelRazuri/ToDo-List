@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6e08380902.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>TO DO LIST</title>
 </head>
 <body>
-    
+    <header>
+
+    </header>
+
+    <main>
+        <section class="profile">
+            <div id="date"></div>
+            <h1>Hola, Joel Rázuri</h1>
+            <span>Vamos a cumplir tus metas</span>
+        </section>
+        
+        <section class="add-task">
+            <input type="text" id="input-task" placeholder="agregar una tarea">
+            <i id="enter" class="fas fa-plus-circle"></i>
+        </section>
+        
+        <section class="section-taks">
+            <h3>Estas son tus tareas pendientes</h3>
+            <ul id="list">
+                <li>
+                    <i class="far fa-circle co" data="realizado" id="0"></i>
+                    <p class="text">hacer la tarea de python</p>
+                    <i class="fas fa-trash de" data="eliminado" id="0"></i>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
