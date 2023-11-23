@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fafafb;
+    --grey-ligth: #D7DDE8;
+    --grey-dark: #757F9A;
+    --violet-dark: #1F1C2C;
+    --violet-light: #928DAB;
+    --blue-dark: #2a73c2;
+}
+
+body {
+    background: linear-gradient(to top, var(--violet-dark),var(--violet-light));
+    height: 100vh;
+}
+
+main {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* PROFILE */
+.profile h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.profile span {
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+.date {
+    color: var(--white);
+    padding: 50px 0 5px 0;
+}
+
+
+/* ADD TASK */
+.add-task {
+    background-color: var(--grey-ligth);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    margin: 40px 0;
+}
+
+.add-task input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--grey-ligth);
+}
+
+.add-task i {
+    font-size: 40px;
+    color: var(--violet-dark);
+}
+
+.add-task i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.add-task input::placeholder {
+    font-size: 1.1rem;
+    color: var(--violet-dark);
+}
+
+
+/* SECTION TASKS */
+.section-tasks h3 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.section-tasks li {
+    display: flex;
+    background: linear-gradient(to right, var(--grey-dark), var(--grey-ligth));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.section-tasks i {
+    font-size: 20px;
+}
+
+.section-tasks i:hover {
+    cursor: pointer;
+    color: var(--violet-light);
+}
+
+.section-tasks > ul p {
+ font-size: 1.2rem;
+}
+
+.line-trough {
+    text-decoration: line-through;
+    color: var(--violet-light);
+}
