@@ -25,6 +25,7 @@ main {
     margin: 0 auto;
 }
 
+
 /* PROFILE */
 .profile h1 {
     color: var(--white);
@@ -53,6 +54,7 @@ main {
     padding: 10px;
     gap: 70px;
     margin: 40px 0;
+    box-shadow: 0px 5px 0px 0px #454546;
 }
 
 .add-task input {
@@ -88,12 +90,13 @@ main {
 
 .section-tasks li {
     display: flex;
-    background: linear-gradient(to right, var(--grey-dark), var(--grey-ligth));
+    background: var(--grey-dark);
     border-radius: 15px;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
     margin: 5px 0;
+    color: var(--grey-ligth);
 }
 
 .section-tasks i {
@@ -102,7 +105,7 @@ main {
 
 .section-tasks i:hover {
     cursor: pointer;
-    color: var(--violet-light);
+    color: var(--violet-dark);
 }
 
 .section-tasks > ul p {
@@ -111,5 +114,5 @@ main {
 
 .line-trough {
     text-decoration: line-through;
-    color: var(--violet-light);
+    color: var(--violet-dark);
 }
