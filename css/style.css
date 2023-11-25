@@ -63,6 +63,7 @@ main {
     border-radius: 8px;
     border: none;
     background-color: var(--grey-ligth);
+    padding-left: 10px;
 }
 
 .add-task i {
