@@ -48,6 +48,12 @@ buttonEnter.addEventListener("click", () => {
 });
 
 
+// función tarea eliminada
+function taskDeleted(element) {
+    element.parentNode.parentNode.removeChild(element.parentNode);
+}
+
+
 inputTask.addEventListener("keyup", function(event){
     if (event.key === "Enter"){
         const task = inputTask.value;
@@ -67,6 +73,6 @@ list.addEventListener("click", function(event){
     if (elementData === "realizado") {
         taskDone(element);
     } else if (elementData === "eliminado") {
-        taskDeleted();
+        taskDeleted(element);
     }
 });
