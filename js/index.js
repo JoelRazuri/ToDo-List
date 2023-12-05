@@ -1,6 +1,5 @@
 const d = document;
 
-// add task
 const date = d.querySelector("#date"),
       list = d.querySelector("#list"),
       inputTask = d.querySelector("#input-task"),
@@ -9,6 +8,8 @@ const date = d.querySelector("#date"),
 const check = "fa-check-circle",
       uncheck = "fa-circle",
       lineThrough = "line-through";
+
+const tasksList = [];
 
 let id = 0;
 
@@ -35,6 +36,7 @@ function taskDone(element) {
     element.classList.toggle(check);
     element.classList.toggle(uncheck);
     element.parentNode.querySelector(".text").classList.toggle(lineThrough);
+    tasksList[element.id].done = tasksList[element.id].done ?false :true;
 }
 
 buttonEnter.addEventListener("click", () => {
@@ -42,6 +44,12 @@ buttonEnter.addEventListener("click", () => {
 
     if (task) {
         addTask(task, id, false, false);
+        tasksList.push({
+            name: task,
+            id: id,
+            done: false,
+            deleted: false
+        });
     }
     inputTask.value = "";
     id++;
@@ -51,6 +59,7 @@ buttonEnter.addEventListener("click", () => {
 // función tarea eliminada
 function taskDeleted(element) {
     element.parentNode.parentNode.removeChild(element.parentNode);
+    tasksList[element.id].deleted = true;
 }
 
 
@@ -59,6 +68,12 @@ inputTask.addEventListener("keyup", function(event){
         const task = inputTask.value;
         if (task) {
             addTask(task, id, false, false);
+            tasksList.push({
+                name: task,
+                id: id,
+                done: false,
+                deleted: false
+            });
         }
         inputTask.value = "";
         id++;
