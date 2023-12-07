@@ -9,9 +9,8 @@ const check = "fa-check-circle",
       uncheck = "fa-circle",
       lineThrough = "line-through";
 
-const tasksList = [];
-
-let id = 0;
+let tasksList;
+let id;
 
 
 // función fecha
@@ -56,6 +55,7 @@ buttonEnter.addEventListener("click", () => {
             deleted: false
         });
     }
+    localStorage.setItem("TODO", JSON.stringify(tasksList));
     inputTask.value = "";
     id++;
 });
@@ -80,6 +80,7 @@ inputTask.addEventListener("keyup", function(event){
                 deleted: false
             });
         }
+        localStorage.setItem("TODO", JSON.stringify(tasksList));
         inputTask.value = "";
         id++;
     }
@@ -95,4 +96,25 @@ list.addEventListener("click", function(event){
     } else if (elementData === "eliminado") {
         taskDeleted(element);
     }
+    localStorage.setItem("TODO", JSON.stringify(tasksList));
 });
+
+
+function loadList(data) {
+    data.forEach(function(i){
+        addTask(i.name, i.id, i.done, i.deleted);
+    });
+}
+
+
+
+// local storage get item
+let data = localStorage.getItem("TODO");
+if (data) {
+    tasksList = JSON.parse(data);
+    id = tasksList.length;
+    loadList(tasksList);
+} else {
+    tasksList = [];
+    id = 0;
+}
