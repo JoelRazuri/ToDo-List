@@ -13,6 +13,11 @@ const tasksList = [];
 
 let id = 0;
 
+
+// función fecha
+const DATE = new Date();
+date.innerHTML = DATE.toLocaleDateString("es-AR", {weekday:"long",month:"short", day:"numeric"});
+
 // función agregar tarea
 function addTask(task, id, done, deleted) {
     
